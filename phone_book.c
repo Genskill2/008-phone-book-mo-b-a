@@ -261,14 +261,31 @@ int delete(FILE *db_file, char *name)
       */
 
       /* TBD */
-      
+      if (base==p)
+      {
+        base=p->next;
+        del=p;
+        deleted=1;
+        free(del);
+       
+      }
+      else
+      {
+        del=p;
+        prev->next=p->next;
+        free(del);
+        deleted=1;
+      }
       
     }
+    prev=p;
+    p=p->next;
   }
   write_all_entries(base);
   free_entries(base);
   return deleted;
 }
+
 
 int search(FILE *file,char *a)
 {
