@@ -234,7 +234,7 @@ void list(FILE *db_file)
     i++;
   }
   /* TBD print total count */
-  printf("Total entries:  %i\n",i);
+  printf("Total entries :  %i\n",i);
   free_entries(base);
 }
 
