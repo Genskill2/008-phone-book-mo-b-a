@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
     char *input= argv[2];
     if(search(srch,input)==0)
     {
-      printf("No matches found\n");
+      printf("no match\n");
       fclose(srch);
       exit(1);
     }
